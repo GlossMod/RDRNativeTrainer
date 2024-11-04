@@ -2,19 +2,13 @@
 #include "keyboard.h"
 #include "scriptmenu.h"
 
-// int Initfont()
-// {
-//     // 字体文件路径（系统的微软雅黑字体）
-//     const char *fontPath = "GlossTrainer\\msyh.ttc";
-
-//     // 字体大小（通常为 72.0f）
-//     float fontSize = 72.0f;
-
-//     // 注册字体并获取 fontId
-//     int fontId = registerFont(fontPath, fontSize);
-
-//     return fontId;
-// }
+int Initfont()
+{
+    const char *fontPath = "GlossTrainer\\msyh.ttc";
+    float fontSize = 72.0f;
+    int fontId = registerFont(fontPath, fontSize);
+    return fontId;
+}
 
 MenuBase *CreatePlayerMenu(MenuController *controller)
 {
@@ -63,7 +57,7 @@ void main()
 
 void ScriptMain()
 {
-    // Initfont();
+    Initfont();
     srand(GetTickCount64());
     main();
 }
