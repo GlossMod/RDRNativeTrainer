@@ -1,0 +1,10 @@
+add_rules("mode.debug", "mode.release")
+
+target("RDRNativeTrainer")
+    set_kind("shared")
+    add_files("src/*.cpp")
+    add_includedirs("src/inc")
+    add_includedirs("src/include")
+    add_linkdirs("lib")
+    add_links("ScriptHookRDR")
+    set_extension(".asi")
